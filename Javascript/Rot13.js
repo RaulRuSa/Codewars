@@ -15,7 +15,6 @@ function rot13(message){
           aux = aux -26
         }
         str += String.fromCharCode(aux)
-        console.log(str)
       } 
       else if(aux >= 97 && aux <= 122) {
         aux += 13
