@@ -40,3 +40,25 @@ productFib(714) # should return {21, 34, true},
 productFib(800) # should return {34, 55, false}, 
  */
 
+function productFib(prod){
+    let num1 
+    let num2
+    function fibonacci(num){
+      if (num <2)
+        return num
+      else 
+        return (fibonacci(num-1) + fibonacci (num-2)) 
+    }
+    for(let i=0; i<=prod; i++){
+      num1 = fibonacci(i)
+      num2 = fibonacci(i+1)
+      if((num1 * num2) == prod){
+         return ([num1, num2, true])
+         }
+      else if((num1 * num2) > prod){
+         return ([num1, num2, false])
+         }
+    }
+      
+  }
+  
